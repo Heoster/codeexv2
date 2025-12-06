@@ -1,0 +1,252 @@
+{
+  "providers": {
+    "googleai": {
+      "type": "googleai",
+      "apiKeyEnvVar": "GOOGLE_GENAI_API_KEY",
+      "enabled": true
+    },
+    "huggingface": {
+      "type": "huggingface",
+      "apiKeyEnvVar": "HUGGINGFACE_API_KEY",
+      "baseUrl": "https://api-inference.huggingface.co",
+      "enabled": true
+    },
+    "openrouter": {
+      "type": "openrouter",
+      "apiKeyEnvVar": "OPENROUTER_API_KEY",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "enabled": true
+    }
+  },
+  "models": [
+    {
+      "id": "gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash",
+      "provider": "googleai",
+      "modelId": "gemini-2.5-flash",
+      "category": "general",
+      "description": "Fast and capable model for general tasks",
+      "contextWindow": 32768,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "topK": 40,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "gemini-1.5-pro",
+      "name": "Gemini 1.5 Pro",
+      "provider": "googleai",
+      "modelId": "gemini-1.5-pro",
+      "category": "general",
+      "description": "Advanced model with long context window",
+      "contextWindow": 1000000,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "topK": 40,
+        "maxOutputTokens": 8192
+      },
+      "enabled": true
+    },
+    {
+      "id": "gemini-1.5-flash",
+      "name": "Gemini 1.5 Flash",
+      "provider": "googleai",
+      "modelId": "gemini-1.5-flash",
+      "category": "general",
+      "description": "Fast model optimized for speed",
+      "contextWindow": 1000000,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "topK": 40,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "gemini-pro",
+      "name": "Gemini Pro",
+      "provider": "googleai",
+      "modelId": "gemini-pro",
+      "category": "general",
+      "description": "Balanced model for various tasks",
+      "contextWindow": 32768,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "topK": 40,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "gemini-pro-vision",
+      "name": "Gemini Pro Vision",
+      "provider": "googleai",
+      "modelId": "gemini-pro-vision",
+      "category": "multimodal",
+      "description": "Multimodal model for text and images",
+      "contextWindow": 32768,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "topK": 40,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "qwen-72b",
+      "name": "Qwen 2.5 72B Instruct",
+      "provider": "huggingface",
+      "modelId": "Qwen/Qwen2.5-72B-Instruct",
+      "category": "general",
+      "description": "Excellent at code generation, math, and multilingual support",
+      "contextWindow": 32768,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "deepseek-coder-33b",
+      "name": "DeepSeek Coder 33B",
+      "provider": "huggingface",
+      "modelId": "deepseek-ai/deepseek-coder-33b-instruct",
+      "category": "coding",
+      "description": "Superior code generation and understanding",
+      "contextWindow": 16384,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.3,
+        "topP": 0.9,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "wizardcoder-python-34b",
+      "name": "WizardCoder Python 34B",
+      "provider": "huggingface",
+      "modelId": "WizardLM/WizardCoder-Python-34B-V1.0",
+      "category": "coding",
+      "description": "Python-focused coding assistant",
+      "contextWindow": 16384,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.3,
+        "topP": 0.9,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "wizardmath-70b",
+      "name": "WizardMath 70B",
+      "provider": "huggingface",
+      "modelId": "microsoft/WizardMath-70B-V1.0",
+      "category": "math",
+      "description": "Mathematical reasoning and problem solving",
+      "contextWindow": 4096,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.2,
+        "topP": 0.85,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "llama-2-70b",
+      "name": "Llama 2 70B Chat",
+      "provider": "huggingface",
+      "modelId": "meta-llama/Llama-2-70b-chat-hf",
+      "category": "general",
+      "description": "Strong analytical capabilities",
+      "contextWindow": 4096,
+      "supportsStreaming": true,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxOutputTokens": 4096
+      },
+      "enabled": true
+    },
+    {
+      "id": "dialogpt-large",
+      "name": "DialoGPT Large",
+      "provider": "huggingface",
+      "modelId": "microsoft/DialoGPT-large",
+      "category": "conversation",
+      "description": "Optimized for chat conversations",
+      "contextWindow": 1024,
+      "supportsStreaming": false,
+      "defaultParams": {
+        "temperature": 0.9,
+        "topP": 0.95,
+        "maxOutputTokens": 1024
+      },
+      "enabled": true
+    },
+    {
+      "id": "blenderbot-400m",
+      "name": "BlenderBot 400M",
+      "provider": "huggingface",
+      "modelId": "facebook/blenderbot-400M-distill",
+      "category": "conversation",
+      "description": "Lightweight conversational AI",
+      "contextWindow": 128,
+      "supportsStreaming": false,
+      "defaultParams": {
+        "temperature": 0.9,
+        "topP": 0.95,
+        "maxOutputTokens": 512
+      },
+      "enabled": true
+    },
+    {
+      "id": "kosmos-2",
+      "name": "Kosmos-2",
+      "provider": "huggingface",
+      "modelId": "microsoft/kosmos-2-patch14-224",
+      "category": "multimodal",
+      "description": "Vision and language understanding",
+      "contextWindow": 4096,
+      "supportsStreaming": false,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxOutputTokens": 2048
+      },
+      "enabled": true
+    },
+    {
+      "id": "blip2",
+      "name": "BLIP-2",
+      "provider": "huggingface",
+      "modelId": "Salesforce/blip2-opt-2.7b",
+      "category": "multimodal",
+      "description": "Image understanding and captioning",
+      "contextWindow": 2048,
+      "supportsStreaming": false,
+      "defaultParams": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxOutputTokens": 1024
+      },
+      "enabled": true
+    }
+  ]
+}
